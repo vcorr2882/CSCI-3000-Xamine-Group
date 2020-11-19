@@ -20,7 +20,7 @@ class PatientInfoForm(forms.ModelForm):
         model = Patient
         fields = [
             'first_name', 'middle_name', 'last_name', 'email_info', 'birth_date', 'phone_number',
-            'allergy_asthma', 'allergy_xraydye', 'allergy_mridye', 'allergy_latex', 'notes'
+            'allergy_asthma', 'allergy_xraydye', 'allergy_mridye', 'allergy_latex', 'notes', 'user_acc'
             ]
 
         widgets = {
@@ -36,6 +36,7 @@ class PatientInfoForm(forms.ModelForm):
             'allergy_mridye': forms.Select(attrs={'class': 'form-control'}, choices=yesnoch),
             'allergy_latex': forms.Select(attrs={'class': 'form-control'}, choices=yesnoch),
             'notes': forms.Textarea(attrs={'class': 'form-control', 'autocomplete': 'off', 'rows': '3'}),
+            'user_acc': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
         }
 
 
