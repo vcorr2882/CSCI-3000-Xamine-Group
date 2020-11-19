@@ -28,6 +28,7 @@ class PatientInfoForm(forms.ModelForm):
             'middle_name': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
             'email_info': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
+             'user_acc': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
             'birth_date': DatePickerInput(format='%m/%d/%Y', options={"useCurrent": False},
                                           attrs={'placeholder': 'mm/dd/yyyy'}),
             'phone_number': forms.TextInput(attrs={'class': 'form-control input-phone', 'autocomplete': 'off'}),
@@ -36,7 +37,6 @@ class PatientInfoForm(forms.ModelForm):
             'allergy_mridye': forms.Select(attrs={'class': 'form-control'}, choices=yesnoch),
             'allergy_latex': forms.Select(attrs={'class': 'form-control'}, choices=yesnoch),
             'notes': forms.Textarea(attrs={'class': 'form-control', 'autocomplete': 'off', 'rows': '3'}),
-            'user_acc': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
         }
 
 
