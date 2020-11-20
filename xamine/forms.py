@@ -20,8 +20,8 @@ class PatientInfoForm(forms.ModelForm):
         model = Patient
         fields = [
             'first_name', 'middle_name', 'last_name', 'email_info', 'birth_date', 'phone_number',
-            'allergy_asthma', 'allergy_xraydye', 'allergy_mridye', 'allergy_latex', 'notes',
-            ]
+            'allergy_asthma', 'allergy_xraydye', 'allergy_mridye', 'allergy_latex', 'notes'
+                 ]
 
         widgets = {
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
