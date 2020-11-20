@@ -366,65 +366,7 @@ def new_patient(request):
         new_patient = new_form.save()
         new_patient.doctor_id = request.user.pk
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    #Where I added the new code to add user account 
-    new_username = usser_acc;
-    extra = 1
-    while(not new_username):
-        potential_username = f"{new_patient.fname[0]}{new_patient.lname}{extra}"
-        conflicts = User.objects.filter(username=potential_username)
-        if len(conflicts) > 0:
-            extra = extra + 1
-        else:
-            new_username = potential_username
-            
-    new_patient.user_account = User.objects.create (
-      username = new_username,
-      first_name = new_patient.fname,
-      last_name = new_patient.lname
-      )
-    new_patient.add_group('Patients')
     new_patient.save()
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-     
         return redirect('new_order', pat_id=new_patient.pk)
 
     else:
