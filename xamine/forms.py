@@ -20,14 +20,13 @@ class PatientInfoForm(forms.ModelForm):
         model = Patient
         fields = [
             'first_name', 'middle_name', 'last_name', 'email_info', 'birth_date', 'phone_number',
-            'allergy_asthma', 'allergy_xraydye', 'allergy_mridye', 'allergy_latex', 'notes', 'user_acc'
+            'allergy_asthma', 'allergy_xraydye', 'allergy_mridye', 'allergy_latex', 'notes',
             ]
 
         widgets = {
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
             'middle_name': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
-            'user_acc': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
             'email_info': forms.TextInput(attrs={'class': 'form-control', 'autocomplete': 'off'}),
             'birth_date': DatePickerInput(format='%m/%d/%Y', options={"useCurrent": False},
                                           attrs={'placeholder': 'mm/dd/yyyy'}),
